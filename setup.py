@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 import taggit
 
@@ -29,7 +29,6 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
@@ -38,4 +37,7 @@ setup(
     ],
     include_package_data=True,
     zip_safe=False,
+    setup_requires=[
+        'isort'
+    ],
 )

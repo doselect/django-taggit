@@ -30,10 +30,11 @@ playing around with the API.
 
         Removes all tags from an object.
 
-    .. method:: set(*tags)
+    .. method:: set(*tags, clear=False)
 
-        Removes all the current tags and then adds the specified tags to the
-        object.
+        If ``clear = True`` removes all the current tags and then adds the
+        specified tags to the object. Otherwise sets the object's tags to those
+        specified, removing only the missing tags and adding only the new tags.
 
     .. method: most_common()
 
@@ -41,6 +42,8 @@ playing around with the API.
         they appear, available as the ``num_times`` attribute on each tag. The
         ``QuerySet``is ordered by ``num_times``, descending.  The ``QuerySet``
         is lazily evaluated, and can be sliced efficiently.
+
+        :param min_count: Specify a min count to limit the returned queryset
 
     .. method:: similar_objects()
 
