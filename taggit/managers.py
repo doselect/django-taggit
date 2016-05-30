@@ -94,6 +94,7 @@ class ExtraJoinRestriction(object):
 
 class _TaggableManager(models.Manager):
     def __init__(self, through, model, instance, prefetch_cache_name):
+        self.name = None
         self.through = through
         self.model = model
         self.instance = instance
